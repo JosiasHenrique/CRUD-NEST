@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
 @Controller('recados')
 export class RecadosController {
@@ -9,7 +9,13 @@ export class RecadosController {
     }
 
     @Get(':id')
-    findOne() {
+    findOne(@Param('id') id: string) {
+        console.log(id);
         return `Essa rota retorna um recado`;
+    }
+
+    @Post()
+    create(@Body() body: any) {
+        return body;
     }
 }

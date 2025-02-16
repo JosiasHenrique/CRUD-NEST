@@ -2,3 +2,18 @@
 
 # Recados
 GET {{baseUrl}}/recados
+
+###
+
+# Recado por id
+
+GET {{baseUrl}}/recados/20
+
+###
+
+POST {{baseUrl}}/recados
+Content-Type: application/json
+
+{
+    "recado": "Recado qualquer."
+}
